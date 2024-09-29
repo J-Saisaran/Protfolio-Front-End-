@@ -9,9 +9,9 @@ const Navbar = () => {
         <Button color="inherit" component={Link} to="/about">
           About
         </Button>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'center', color: 'white' }}>
+        <Button color="inherit" component={Link} to="/" sx={{ textAlign: 'center', flexGrow: 1 }}>
           My Portfolio
-        </Typography>
+        </Button>
         <Button color="inherit" component={Link} to="/projects">
           Projects
         </Button>
