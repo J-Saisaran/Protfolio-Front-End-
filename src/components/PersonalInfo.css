@@ -1,0 +1,22 @@
+  /* PersonalInfo.css */
+
+  .profile-info {
+    background-color: rgb(0, 0, 0); /* Semi-transparent black background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    margin: 20px; /* Adds spacing around the container */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Vertically center content */
+    text-align: center; 
+    
+  }
+  .profile-photo{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    zoom: 150%;
+  }

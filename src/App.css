@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Column layout */
+  min-height: 100vh; /* Ensure the body takes at least full height */
+}
+
+.container {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  color: white; /* Default text color */
+  padding-bottom: 60px; /* Space for fixed footer */
+  overflow-y: auto; /* Enable vertical scrolling */
+  position: relative; /* Positioning context for child elements */
+  z-index: 1; /* Ensure container is above the background */
+}
+
+/* Fixed footer styles */
+.footer {
+  position: fixed; /* Fixed position */
+  bottom: 0; /* Stick to bottom */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  background-color: rgba(0, 0, 0, 0.7); /* Footer background color with transparency */
+  color: white; /* Footer text color */
+  text-align: center; /* Center footer text */
+  padding: 10px 0; /* Padding for footer */
+}
+
+/* Background image styles */
+.background {
+  position: fixed; /* Keep the background fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/bac1.jpeg'); /* Replace with your background image path */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the background image */
+  z-index: -1; /* Position behind other elements */
+}
+
+/* Optional: Animated gradient overlay */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-overlay {
+  position: fixed; /* Keep the gradient overlay fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  background-size: 400% 400%; 
+  animation: gradientAnimation 20s ease infinite; 
+  z-index: 0; /* Ensure it overlays on top of the background image */
+}

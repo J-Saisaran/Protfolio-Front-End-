@@ -1,0 +1,40 @@
+
+
+.project-list-container {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center the cards */
+  padding: 20px;
+}
+
+.project-card {
+  background-color: rgb(0, 0, 0); /* Semi-transparent black background */
+  border-radius: 25px;
+  width: 100%; /* Take full width of the page */
+  max-width: 100%; /* Limit max width for better readability on large screens */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+  margin: 20px 0; /* Adds spacing between each card */
+}
+
+.project-header {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.header-background {
+  background-color: black; /* Black background for the header */
+  padding: 20px; /* Padding around the header */
+  text-align: center; /* Center the text */
+  border-radius: 10px;
+}
+
+.project-header {
+  color: white; /* White text color for the header */
+  margin: 0; /* Remove default margin */
+}
