@@ -27,8 +27,16 @@ const PersonalInfoComponent = () => {
           <h1>{info.name}</h1>
           <p>{info.bio}</p>
           <p>{info.email}</p>
-          <p>{info.linkedin}</p>
-          <p>{info.github}</p>
+          <p>
+            <a href={info.linkedin} target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+          </p>
+          <p>
+            <a href={info.github} target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </p>
         </div>
       ) : (
         <div>No personal information found.</div>
