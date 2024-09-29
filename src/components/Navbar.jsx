@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <AppBar position="static" sx={{ backgroundColor: 'black' }}>
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Button color="inherit" component={Link} to="/">
+        <Button color="inherit" component={Link} to="/about">
           About
         </Button>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'center', color: 'white' }}>

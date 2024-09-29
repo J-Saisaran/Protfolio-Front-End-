@@ -5,6 +5,7 @@ import PersonalInfo from './components/PersonalInfo';
 import Projects from './components/Projects';
 import Footer from './footer/Footer';
 import './App.css'; // Import the CSS file
+import About from './components/About';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<PersonalInfo />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About/>} />
         </Routes>
         <Footer className="footer" /> 
       </div>

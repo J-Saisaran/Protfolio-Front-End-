@@ -41,7 +41,7 @@ const PersonalInfoComponent = () => {
             </a>
           </p>
           <p>
-            <GitHubIcon />{' '}
+            <GitHubIcon />{' '} 
             <a href={info.github} target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
