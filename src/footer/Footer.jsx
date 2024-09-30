@@ -25,25 +25,25 @@ const Footer = () => {
                     </Box>
                     
                     <Box sx={{ mt: 1, display: 'flex', justifyContent: 'end', alignItems: 'center', flexDirection: 'row' }}>
-                        <Link href="#" sx={{ mx: 1, fontSize: '0.75rem' }}>
+                        <Link href="#" target="_blank" rel="noopener noreferrer" sx={{ mx: 1, fontSize: '0.75rem' }}>
                             Privacy Policy
                         </Link>
-                        <Link href="#" sx={{ mx: 1, fontSize: '0.75rem' }}>
+                        <Link href="#" target="_blank" rel="noopener noreferrer" sx={{ mx: 1, fontSize: '0.75rem' }}>
                             Terms of Service
                         </Link>
-                        <Link href="#" sx={{ mx: 1, fontSize: '0.75rem' }}>
+                        <Link href="#" target="_blank" rel="noopener noreferrer" sx={{ mx: 1, fontSize: '0.75rem' }}>
                             Contact Us
                         </Link>
                     </Box>
                     
                     <Box sx={{ mt: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-                        <IconButton href="https://www.facebook.com/Saisaran1027" sx={{ mx: 0.5 }}  >
+                        <IconButton href="https://www.facebook.com/Saisaran1027" target="_blank" rel="noopener noreferrer" sx={{ mx: 0.5 }}>
                             <Facebook fontSize="small" />
                         </IconButton>
-                        <IconButton href="https://www.linkedin.com/in/saisaran-jayaraman/" sx={{ mx: 0.5 }}>
+                        <IconButton href="https://www.linkedin.com/in/saisaran-jayaraman/" target="_blank" rel="noopener noreferrer" sx={{ mx: 0.5 }}>
                             <LinkedIn fontSize="small" />
                         </IconButton>
-                        <IconButton href="https://github.com/J-Saisaran" sx={{ mx: 0.5 }}>
+                        <IconButton href="https://github.com/J-Saisaran" target="_blank" rel="noopener noreferrer" sx={{ mx: 0.5 }}>
                             <GitHub fontSize="small" />
                         </IconButton>
                     </Box>
