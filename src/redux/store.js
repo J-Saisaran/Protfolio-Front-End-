@@ -4,6 +4,7 @@ import projectsReducer from './projectsSlice';
 
 export const store = configureStore({
   reducer: {
+    devtools: false,
     personalInfo: personalInfoReducer,
     projects: projectsReducer,
   },
