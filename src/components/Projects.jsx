@@ -27,8 +27,8 @@ const Projects = () => {
           <h1 className="project-header">My Projects</h1>
         </div>
         {list.length > 0 ? (
-          list.map((project) => (
-            <Card key={project.id} className="project-card" style={{ backgroundColor: 'rgb(0, 0, 0)', color: 'white' }}>
+          list.map((project, index) => (
+            <Card key={project.id || index} className="project-card" style={{ backgroundColor: 'rgb(0, 0, 0)', color: 'white' }}>
               <CardContent>
                 <Typography variant="h5" component="div">
                   Title: {project.title}
@@ -53,7 +53,6 @@ const Projects = () => {
       </div>
     </>
   );
-  
 };
 
 export default Projects;
