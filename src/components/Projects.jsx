@@ -13,11 +13,11 @@ const Projects = () => {
   }, [dispatch]);
 
    if (status === 'loading') {
-    return <div style={{ color: 'black', textAlign: 'center' }}>Loading...</div>;
+    return <div style={{ color: 'black', textAlign: 'end' }}>Loading...</div>;
   }
   
   if (status === 'failed') {
-    return <div style={{ color: 'black', textAlign: 'center' }}>Error: {error}</div>;
+    return <div style={{ color: 'black', textAlign: 'end' }}>Error: {error}</div>;
   }
   
 
