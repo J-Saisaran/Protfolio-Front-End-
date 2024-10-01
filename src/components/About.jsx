@@ -22,11 +22,11 @@ const About = () => {
   
 
   if (status === 'loading') {
-    return <Typography variant="h6" style={{ color: 'black', textAlign: 'center' }}>Loading...</Typography>;
+    return <Typography variant="h6" style={{ color: 'black', textAlign: 'start' }}>Loading...</Typography>;
   }
   
   if (status === 'failed') {
-    return <Typography variant="h6" style={{ color: 'black', textAlign: 'center' }}>Error: {error}</Typography>;
+    return <Typography variant="h6" style={{ color: 'black', textAlign: 'start' }}>Error: {error}</Typography>;
   }
   
 
