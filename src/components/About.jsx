@@ -19,13 +19,16 @@ const About = () => {
     }
   }, [status, dispatch]);
 
-  if (status === 'loading') {
-    return <Typography variant="h6" color="white">Loading...</Typography>;
-  }
+  
 
-  if (status === 'failed') {
-    return <Typography variant="h6" color="white">Error: {error}</Typography>;
+  if (status === 'loading') {
+    return <Typography variant="h6" style={{ color: 'black', textAlign: 'center' }}>Loading...</Typography>;
   }
+  
+  if (status === 'failed') {
+    return <Typography variant="h6" style={{ color: 'black', textAlign: 'center' }}>Error: {error}</Typography>;
+  }
+  
 
   return (
     <Grid container spacing={3} style={{

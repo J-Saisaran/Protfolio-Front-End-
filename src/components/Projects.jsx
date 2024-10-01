@@ -12,13 +12,14 @@ const Projects = () => {
     dispatch(fetchProjects());
   }, [dispatch]);
 
-  if (status === 'loading') {
-    return <div className="loading">Loading...</div>;
+   if (status === 'loading') {
+    return <div style={{ color: 'black', textAlign: 'center' }}>Loading...</div>;
   }
-
+  
   if (status === 'failed') {
-    return <div className="error">Error: {error}</div>;
+    return <div style={{ color: 'black', textAlign: 'center' }}>Error: {error}</div>;
   }
+  
 
   return (
     <>
