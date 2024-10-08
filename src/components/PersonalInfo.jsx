@@ -18,11 +18,11 @@ const PersonalInfoComponent = () => {
 
  
   if (status === 'loading') {
-    return <div style={{ color: 'black', textAlign: 'center' }}>Loading...</div>;
+    return <Typography variant="h6" style={{ color: 'black', textAlign: 'start' }}>Loading...</Typography>;
   }
   
   if (status === 'failed') {
-    return <div style={{ color: 'black', textAlign: 'center' }}>Error: {error}</div>;
+    return <Typography variant="h6" style={{ color: 'black', textAlign: 'start' }}>Error: {error}</Typography>;
   }
   
   return (
