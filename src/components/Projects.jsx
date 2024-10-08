@@ -4,6 +4,7 @@ import { fetchProjects } from '../redux/projectsSlice';
 import { Card, CardContent, Typography, CardActions, Button } from '@mui/material';
 import './Projects.css';
 
+
 const Projects = () => {
   const dispatch = useDispatch();
   const { list, status, error } = useSelector((state) => state.projects);
@@ -12,12 +13,14 @@ const Projects = () => {
     dispatch(fetchProjects());
   }, [dispatch]);
 
+
+
   if (status === 'loading') {
-    return <Typography variant="h6" style={{ color: 'black', textAlign: 'start' }}>Loading...</Typography>;
+    return <Typography variant="h6" style={{ color: 'black', textAlign: 'end' }}>Loading...</Typography>;
   }
   
   if (status === 'failed') {
-    return <Typography variant="h6" style={{ color: 'black', textAlign: 'start' }}>Error: {error}</Typography>;
+    return <Typography variant="h6" style={{ color: 'black', textAlign: 'end' }}>Error: {error}</Typography>;
   }
   
 

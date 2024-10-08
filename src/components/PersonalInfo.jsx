@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPersonalInfo } from '../redux/personalInfoSlice'; // Adjust the path as necessary
 import './PersonalInfo.css'; // Add CSS for styling
+import { Card, CardContent, Typography, CardActions, Button } from '@mui/material';
 
 // Import icons from MUI
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -16,13 +17,14 @@ const PersonalInfoComponent = () => {
     dispatch(fetchPersonalInfo());
   }, [dispatch]);
 
- 
+
+
   if (status === 'loading') {
-    return <Typography variant="h6" style={{ color: 'black', textAlign: 'start' }}>Loading...</Typography>;
+    return <Typography variant="h6" style={{ color: 'black', textAlign: 'center' }}>Loading...</Typography>;
   }
   
   if (status === 'failed') {
-    return <Typography variant="h6" style={{ color: 'black', textAlign: 'start' }}>Error: {error}</Typography>;
+    return <Typography variant="h6" style={{ color: 'black', textAlign: 'center' }}>Error: {error}</Typography>;
   }
   
   return (
