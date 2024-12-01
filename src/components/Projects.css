@@ -38,3 +38,7 @@
   color: white; /* White text color for the header */
   margin: 0; /* Remove default margin */
 }
+ p{
+  display: flex;
+    align-items: center;
+ }

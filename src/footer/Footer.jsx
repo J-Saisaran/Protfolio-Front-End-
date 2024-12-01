@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPersonalInfo } from '../redux/personalInfoSlice'; // Adjust the path as necessary
@@ -21,27 +22,21 @@ const Footer = () => {
     }, [contactOpen, status, dispatch]);
 
     return (
-        <Box
-            component="footer"
-            sx={{
-                backgroundColor: '#333', // Dark background color
-                color: '#ffffff', // Bright text color
-                padding: '20px 0', // Padding for the footer
-            }}
-        >
+        <Box  sx={{backgroundColor: '#333', padding: '20px ' }}>
             <Container maxWidth="lg">
-                <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                <Box >
                     <Box sx={{ mt: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
                         <Typography variant="body2" sx={{ fontSize: '0.9rem', fontWeight: 'bold', mb: 0.5, paddingRight: '10px' }}>
                             Saisaran J
                         </Typography>
-                        <Typography variant="caption" color="text.secondary" sx={{ fontSize: '0.75rem', paddingRight: '10px' }}>
+                        
+                    </Box>   
+                    <Box sx={{ mt: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
+                    <Typography variant="caption" color="text.secondary" sx={{ fontSize: '0.75rem', paddingRight: '10px' }}>
                             © {new Date().getFullYear()} Saisaran J. All rights reserved.
                         </Typography>
-                    </Box>
-
-                    {/* Links with Dialogs */}
-                    <Box sx={{ mt: 1, display: 'flex', justifyContent: 'end', alignItems: 'center', flexDirection: 'row' }}>
+                        </Box>            
+                    <Box sx={{ mt: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
                         <Link
                             href="#"
                             onClick={() => setPrivacyOpen(true)}
@@ -82,10 +77,10 @@ const Footer = () => {
 
             {/* Privacy Policy Dialog */}
             <Dialog open={privacyOpen} onClose={() => setPrivacyOpen(false)} PaperProps={{ sx: { backgroundColor: '#000', color: '#fff' } }}>
-                <DialogTitle>Privacy Policy</DialogTitle>
+                <DialogTitle variant="body6">Privacy Policy</DialogTitle>
                 <DialogContent>
-                    <Typography variant="body2">
-                        <Typography variant='h4'> Privacy Policy: <br /></Typography>
+                    <Typography variant="body3">
+                        
                         * At Saisaran J Portfolio (https://saisaran-protfolio-full-stack-develop.netlify.app/), your privacy is important to us. <br />
                         * This policy explains how we collect, use, and protect your information. <br />
                         * We may collect personal data such as your name, email, and project details when you interact with our website. <br />
@@ -103,12 +98,12 @@ const Footer = () => {
                 </DialogActions>
             </Dialog>
 
-            {/* Terms of Service Dialog */}
+
             <Dialog open={termsOpen} onClose={() => setTermsOpen(false)} PaperProps={{ sx: { backgroundColor: '#000', color: '#fff' } }}>
-                <DialogTitle>Terms of Service</DialogTitle>
+                <DialogTitle variant="body6">Terms of Service</DialogTitle>
                 <DialogContent>
-                    <Typography variant="body2">
-                        <Typography variant='h4'>  Terms of Service: <br /></Typography>
+                    <Typography variant="body3">
+                    
                         * By accessing or using https://saisaran-protfolio-full-stack-develop.netlify.app/, you agree to these Terms of Service.<br />
                         * The website must be used only for lawful purposes. All content on this site, including text, images, and code, is owned by Saisaran J and may not be copied without permission.<br />
                         * Our site may include links to third-party websites, but we are not responsible for their content. <br />
@@ -122,9 +117,9 @@ const Footer = () => {
                 </DialogActions>
             </Dialog>
 
-            {/* Contact Us Dialog */}
+
             <Dialog open={contactOpen} onClose={() => setContactOpen(false)} PaperProps={{ sx: { backgroundColor: '#000', color: '#fff' } }}>
-                <DialogTitle>Contact Us</DialogTitle>
+                <DialogTitle variant="body6">Contact Us</DialogTitle>
                 <DialogContent>
                     {status === 'loading' ? (
                         <Typography variant="body2">Loading...</Typography>
@@ -132,7 +127,7 @@ const Footer = () => {
                         <Typography variant="body2" color="error">Error: {error}</Typography>
                     ) : (
                         info && (
-                            <Typography variant="body2">
+                            <Typography variant="body3">
                                 Email: {info.email}<br />
                                 Phone: {info.contact.phone}<br />
                                 Address: {info.contact.address}
@@ -141,7 +136,7 @@ const Footer = () => {
                     )}
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={() => setContactOpen(false)} sx={{ color: '#fff' }}>Close</Button>
+                  <Button onClick={() => setContactOpen(false)} sx={{ color: '#fff' }}>Close</Button>
                 </DialogActions>
             </Dialog>
         </Box>

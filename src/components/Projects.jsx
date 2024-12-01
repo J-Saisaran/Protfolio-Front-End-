@@ -34,7 +34,7 @@ const Projects = () => {
           list.map((project, index) => (
             <Card key={project.id || index} className="project-card" style={{ backgroundColor: 'rgb(0, 0, 0)', color: 'white' }}>
               <CardContent>
-                <Typography variant="h5" component="div">
+                <Typography variant="h5" component="div" style={{  textAlign: 'center', margin:"5px", fontWeight:"bold" }}>
                   Title: {project.title}
                 </Typography>
                 <Typography variant="body1">
