@@ -38,7 +38,7 @@ const About = () => {
       spacing={3}
       style={{
         minHeight: '100vh',
-        padding: '50px 100px',
+        padding: '20px',
       }}
       className={animationTriggered ? 'circle-in-animation' : ''}
     >
