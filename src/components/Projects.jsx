@@ -4,7 +4,6 @@ import { fetchProjects } from '../redux/projectsSlice';
 import { Card, CardContent, Typography, CardActions, Button } from '@mui/material';
 import './Projects.css';
 
-
 const Projects = () => {
   const dispatch = useDispatch();
   const { list, status, error } = useSelector((state) => state.projects);
@@ -12,8 +11,6 @@ const Projects = () => {
   useEffect(() => {
     dispatch(fetchProjects());
   }, [dispatch]);
-
-
 
   if (status === 'loading') {
     return <Typography variant="h6" style={{ color: 'black', textAlign: 'end' }}>Loading...</Typography>;
@@ -23,7 +20,6 @@ const Projects = () => {
     return <Typography variant="h6" style={{ color: 'black', textAlign: 'end' }}>Error: {error}</Typography>;
   }
   
-
   return (
     <>
       <div className="project-list-container">
@@ -34,7 +30,7 @@ const Projects = () => {
           list.map((project, index) => (
             <Card key={project.id || index} className="project-card" style={{ backgroundColor: 'rgb(0, 0, 0)', color: 'white' }}>
               <CardContent>
-                <Typography variant="h5" component="div" style={{  textAlign: 'center', margin:"5px", fontWeight:"bold" }}>
+                <Typography variant="h5" component="div" style={{ textAlign: 'center', margin:"5px", fontWeight:"bold" }}>
                   Title: {project.title}
                 </Typography>
                 <Typography variant="body1">

@@ -22,7 +22,7 @@ const Footer = () => {
     }, [contactOpen, status, dispatch]);
 
     return (
-        <Box  sx={{backgroundColor: '#333', padding: '20px ' }}>
+        <Box classname="fixed" sx={{backgroundColor: '#333', padding: '20px ' }}>
             <Container maxWidth="lg">
                 <Box >
                     <Box sx={{ mt: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>

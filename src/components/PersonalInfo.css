@@ -1,22 +1,54 @@
-  /* PersonalInfo.css */
+/* Add a fade-in animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-  .profile-info {
-    background-color: rgb(0, 0, 0); /* Semi-transparent black background */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px;
-    margin: 20px; /* Adds spacing around the container */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    display: flex; /* Use flexbox for centering */
-  flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Vertically center content */
-    text-align: center; 
-    
-  }
-  .profile-photo{
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 10px;
-    zoom: 150%;
-  }
+.personal-info-container {
+  animation: 1.5s ease-in fade-in; /* Fade-in animation */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.profile-info {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: 1.5s ease-out fade-in; /* Fade-in effect on profile info */
+}
+
+.profile-photo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  zoom: 150%;
+}
+
+p {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

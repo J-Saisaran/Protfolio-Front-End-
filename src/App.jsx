@@ -10,16 +10,65 @@ import About from './components/About';
 const App = () => {
   return (
     <Router>
-      <div className="background" /> {/* Background image here */}
+      <ul className="background">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       <div className="gradient-overlay" /> {/* Optional: Animated gradient overlay */}
       <div className="container"> {/* Wrap content in a container */}
         <Navbar />
         <Routes>
           <Route path="/" element={<PersonalInfo />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About/>} />
+          <Route path="/about" element={<About />} />
         </Routes>
-        <Footer className="footer" /> 
+        <Footer className="footer" />
       </div>
     </Router>
   );

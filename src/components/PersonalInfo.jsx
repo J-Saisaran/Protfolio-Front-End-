@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchPersonalInfo } from '../redux/personalInfoSlice'; // Adjust the path as necessary
-import './PersonalInfo.css'; // Add CSS for styling
+import { fetchPersonalInfo } from '../redux/personalInfoSlice';
+import './PersonalInfo.css'; 
 import { Card, CardContent, Typography, CardActions, Button } from '@mui/material';
-
-// Import icons from MUI
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
@@ -16,8 +14,6 @@ const PersonalInfoComponent = () => {
   useEffect(() => {
     dispatch(fetchPersonalInfo());
   }, [dispatch]);
-
-
 
   if (status === 'loading') {
     return <Typography variant="h6" style={{ color: 'black', textAlign: 'center' }}>Loading...</Typography>;
