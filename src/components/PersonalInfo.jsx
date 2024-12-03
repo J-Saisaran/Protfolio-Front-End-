@@ -24,9 +24,9 @@ const PersonalInfoComponent = () => {
   }
   
   return (
-    <div className="personal-info-container">
+    <div className="personal-info-container" >
       {info ? (
-        <div className="profile-info">
+        <div className="profile-info" >
           <img src="Saisaran.jpg" alt="Profile" className="profile-photo" />
           <h1>{info.name}</h1>
           <p>{info.bio}</p>

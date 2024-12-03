@@ -33,16 +33,13 @@ const About = () => {
   }
 
   return (
-    <Grid
-      container
-      spacing={3}
-      style={{
-        minHeight: '100vh',
-        padding: '20px',
-      }}
+    <Grid  container spacing={3}  sx={{
+      minHeight: '100vh',
+      padding: { xs: '20px', lg: '40px 100px' },
+    }}
       className={animationTriggered ? 'circle-in-animation' : ''}
     >
-        <Grid item xs={12} md={12}>
+        <Grid item xs={12} md={12} >
         <Card style={{ backgroundColor: 'black', color: 'white', padding: '20px' }}>
           <CardContent>
             <Typography variant="h4">Personal Information</Typography>
