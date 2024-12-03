@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPersonalInfo } from '../redux/personalInfoSlice';
 import './PersonalInfo.css'; 
-import { Card, CardContent, Typography, CardActions, Button } from '@mui/material';
+import { Typography} from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
